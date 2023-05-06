@@ -13,7 +13,6 @@ public class AnalisisAddController implements Handler {
 	private AnalsisRepository repo;
 
 	public AnalisisAddController(AnalsisRepository repo) {
-		super();
 		this.repo = repo;
 	}
 	

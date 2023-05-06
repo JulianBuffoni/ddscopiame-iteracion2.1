@@ -16,7 +16,6 @@ public class AnalisisListController implements Handler {
 	@Override
 	public void handle(Context ctx) throws Exception {
 		ctx.json(repo.all());
-
 	}
 
 }

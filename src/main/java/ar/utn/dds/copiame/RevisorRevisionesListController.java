@@ -4,15 +4,15 @@ import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
 public class RevisorRevisionesListController implements Handler {
+	private AnalsisRepository repo;
 
 	public RevisorRevisionesListController(AnalsisRepository repo) {
-		// TODO Auto-generated constructor stub
+		this.repo = repo;
 	}
 
 	@Override
 	public void handle(Context ctx) throws Exception {
-		// TODO Auto-generated method stub
-
+		ctx.json(repo.all());
 	}
 
 }
