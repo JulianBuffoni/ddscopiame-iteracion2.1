@@ -88,10 +88,11 @@ public class CopiameBot extends TelegramLongPollingBot {
 		String apiEndpoint = System.getenv("COPIAME_API");
 		if (apiEndpoint == null) {
 			apiEndpoint = "http://localhost:8080";
+			System.out.println("API ENDPOINT");
 		}
 		try {
 			// Se registra el bot
-			telegramBotsApi.registerBot(new CopiameBot(System.getenv("TOKEN_BOT"), apiEndpoint));
+			telegramBotsApi.registerBot(new CopiameBot(System.getenv("BOT_TOKEN"), apiEndpoint));
 		} catch (TelegramApiException e) {
 			e.printStackTrace();
 		}
